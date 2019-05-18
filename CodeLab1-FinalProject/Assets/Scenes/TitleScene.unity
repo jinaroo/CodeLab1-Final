@@ -1525,7 +1525,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: takoyaki
+  m_Text: tako-yucky
 --- !u!222 &951638762
 CanvasRenderer:
   m_ObjectHideFlags: 0
