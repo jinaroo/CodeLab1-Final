@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 46631870}
   - component: {fileID: 46631869}
   m_Layer: 0
-  m_Name: FoodController_Holder
+  m_Name: FoodSpawner_Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,6 +147,10 @@ MonoBehaviour:
   badFoods:
   - {fileID: 6402715664472221583, guid: c1bcb2f448f084ce8b3e40d43844ecd0, type: 3}
   - {fileID: 4234329112237135313, guid: 98ded378d21aa440b803185b0cb6d81d, type: 3}
+  leftSpawnPos: {x: 0, y: 0, z: 0}
+  rightSpawnPos: {x: 0, y: 0, z: 0}
+  spawnInterval: 0
+  badFoodChance: 0.3
 --- !u!4 &46631870
 Transform:
   m_ObjectHideFlags: 0
@@ -200,6 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 114861650}
+  - component: {fileID: 114861651}
   m_Layer: 0
   m_Name: TentacleTip
   m_TagString: Untagged
@@ -221,6 +226,22 @@ Transform:
   m_Father: {fileID: 865721669}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &114861651
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114861649}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &250637241
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 250637242}
+  - component: {fileID: 250637243}
   m_Layer: 0
   m_Name: TentacleTip
   m_TagString: Untagged
@@ -251,6 +273,22 @@ Transform:
   m_Father: {fileID: 549530823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &250637243
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250637241}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &325313761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 875403304}
+  - component: {fileID: 875403305}
   m_Layer: 0
   m_Name: TentacleTip
   m_TagString: Untagged
@@ -1048,6 +1087,22 @@ Transform:
   m_Father: {fileID: 995356430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &875403305
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 875403303}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &907378300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 907378301}
+  - component: {fileID: 907378302}
   m_Layer: 0
   m_Name: TentacleTip
   m_TagString: Untagged
@@ -1078,6 +1134,22 @@ Transform:
   m_Father: {fileID: 325313764}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &907378302
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907378300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &951638759
 GameObject:
   m_ObjectHideFlags: 0
