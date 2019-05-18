@@ -32,7 +32,7 @@ public class OctopusController : MonoBehaviour
             }          
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().buildIndex > 0)
         {
             UI_Manager.instance.Score = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
