@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2093184936174259510}
   - component: {fileID: 2939646936426590655}
   m_Layer: 0
-  m_Name: circle
-  m_TagString: Untagged
+  m_Name: good1
+  m_TagString: BadFood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
