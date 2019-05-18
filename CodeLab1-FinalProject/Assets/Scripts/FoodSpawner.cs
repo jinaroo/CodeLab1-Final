@@ -16,21 +16,6 @@ public class FoodSpawner : MonoBehaviour
     private float nextSpawnTime;
 
     public float badFoodChance = .3f;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        // tagging all items in food arrays
-        foreach (GameObject goodFood in goodFoods)
-        {
-            goodFood.tag = "GoodFood";
-        }
-        
-        foreach (GameObject badFood in goodFoods)
-        {
-            badFood.tag = "BadFood";
-        }
-    }
 
     // Update is called once per frame
     void Update()

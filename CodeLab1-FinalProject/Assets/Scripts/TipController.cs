@@ -14,6 +14,7 @@ public class TipController : MonoBehaviour
             {
                 other.transform.SetParent(transform);
                 other.transform.localPosition = Vector3.zero;
+                other.GetComponent<FoodController>().moveSpeed = 0f; // stop food from moving after it is grabbed
                 tentacleScript.isHoldingFood = true;    
             }
         }      
