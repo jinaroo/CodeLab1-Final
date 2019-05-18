@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OctopusController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class OctopusController : MonoBehaviour
 
     private float nextTimeToResetFace;
 
+    public GameObject loseText;
+
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +30,12 @@ public class OctopusController : MonoBehaviour
             {
                 faceSprite.sprite = normalSprite;
             }          
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            UI_Manager.instance.Score = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
@@ -50,11 +59,13 @@ public class OctopusController : MonoBehaviour
         
         // eat bad food and lose
         if (other.CompareTag("BadFood"))
-        {            
-            // lock player controls
-            // have lose message pop up
-
+        {
+            faceSprite.sprite = blehSprite;
+            
             bleh = true;
+            loseText.SetActive(true);
+            
+            Destroy(other.gameObject);
         }
     }
 }

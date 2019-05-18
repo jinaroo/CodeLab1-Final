@@ -10,5 +10,8 @@ public class FoodController : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        
+        if (Mathf.Abs(transform.position.x) > 15)
+            Destroy(gameObject);
     }
 }

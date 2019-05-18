@@ -7,8 +7,8 @@ public class TipController : MonoBehaviour
     public TentacleController tentacleScript;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // grab food
-        if (tentacleScript.isHoldingFood == false)
+        // grab food when it is not already held (has no parent)
+        if (tentacleScript.isHoldingFood == false && other.transform.parent == null)
         {
             if (other.CompareTag("GoodFood") || other.CompareTag("BadFood"))
             {

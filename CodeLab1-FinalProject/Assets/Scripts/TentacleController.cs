@@ -33,6 +33,8 @@ public class TentacleController : MonoBehaviour
 
     public bool isHoldingFood;
     
+    public OctopusController octopusScript;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +77,14 @@ public class TentacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateLine(baseTransform.position, tipTransform.position);
+        
+        // stop octopus from moving after bleh
+        if (octopusScript.bleh)
+        {
+            return; // skips the rest of the script, preventing movement
+        }
+        
         if (Input.GetKey(tentacleKey))
         {
             tipTransform.position = Vector3.Lerp(tipTransform.position, grabPos, tentacleSpeed);
@@ -87,7 +97,5 @@ public class TentacleController : MonoBehaviour
         {
             tipTransform.position = Vector3.Lerp(tipTransform.position, restPos, tentacleSpeed);
         }
-        
-        UpdateLine(baseTransform.position, tipTransform.position);
     }
 }

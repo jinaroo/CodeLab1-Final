@@ -23,6 +23,12 @@ public class UI_Manager : MonoBehaviour
         set
         {
             score = value;
+
+            if (scoreText == null)
+            {
+                scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+            }
+            
             scoreText.text = "score: " + score;
 
             HighScore = score;
@@ -34,6 +40,11 @@ public class UI_Manager : MonoBehaviour
         get { return highScore; }
         set
         {
+            if (highScoreText == null)
+            {
+                highScoreText = GameObject.Find("HighScoreText").GetComponent<Text>();
+            }
+            
             if (value > highScore)
             {
                 highScore = value;
@@ -60,11 +71,5 @@ public class UI_Manager : MonoBehaviour
         // cont. high scores
         Score = 0;
         HighScore = PlayerPrefs.GetInt(PLAYER_PREF_HIGHSCORE, 10); // default value
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
