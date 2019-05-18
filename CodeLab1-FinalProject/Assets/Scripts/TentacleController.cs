@@ -23,12 +23,24 @@ public class TentacleController : MonoBehaviour
 
     public Transform baseTransform;
     public Transform tipTransform;
+
+    public Vector3 grabPos;
+    public Vector3 restPos;
+    public Vector3 mouthPos;
+
+    public float tentacleSpeed = 0.5f;
+    public KeyCode tentacleKey;
+
+    public bool isHoldingFood;
     
     // Start is called before the first frame update
     void Start()
     {
         tentacleLine = GetComponent<LineRenderer>();
         tentacleMid = transform.position;
+        
+        // rest positions for tentacles
+        restPos = tipTransform.position;
     }
 
     void UpdateLine(Vector3 lineBase, Vector3 lineTip)
@@ -63,6 +75,19 @@ public class TentacleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(tentacleKey))
+        {
+            tipTransform.position = Vector3.Lerp(tipTransform.position, grabPos, tentacleSpeed);
+        }
+        else if (isHoldingFood)
+        {
+            tipTransform.position = Vector3.Lerp(tipTransform.position, mouthPos, tentacleSpeed);
+        }
+        else
+        {
+            tipTransform.position = Vector3.Lerp(tipTransform.position, restPos, tentacleSpeed);
+        }
+        
         UpdateLine(baseTransform.position, tipTransform.position);
     }
 }

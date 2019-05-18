@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 325313763}
   - component: {fileID: 325313762}
   m_Layer: 0
-  m_Name: Tentacle (3)
+  m_Name: Tentacle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,15 +308,15 @@ LineRenderer:
   m_SortingOrder: 1
   m_Positions:
   - {x: 3, y: -5, z: 0}
-  - {x: 3.8024697, y: -4.790124, z: 0}
-  - {x: 4.5432105, y: -4.4938273, z: 0}
-  - {x: 5.222223, y: -4.1111116, z: 0}
-  - {x: 5.839507, y: -3.641976, z: 0}
-  - {x: 6.3950624, y: -3.0864203, z: 0}
-  - {x: 6.88889, y: -2.444445, z: 0}
-  - {x: 7.3209887, y: -1.7160498, z: 0}
-  - {x: 7.691358, y: -0.9012348, z: 0}
-  - {x: 8, y: 0, z: 0}
+  - {x: 3.7222223, y: -4.7901235, z: 0}
+  - {x: 4.388889, y: -4.4938273, z: 0}
+  - {x: 5, y: -4.111111, z: 0}
+  - {x: 5.5555553, y: -3.6419752, z: 0}
+  - {x: 6.055556, y: -3.0864198, z: 0}
+  - {x: 6.5, y: -2.4444444, z: 0}
+  - {x: 6.888889, y: -1.7160493, z: 0}
+  - {x: 7.2222223, y: -0.90123457, z: 0}
+  - {x: 7.5, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -404,6 +404,12 @@ MonoBehaviour:
   smoothAmount: 0.025
   baseTransform: {fileID: 1581682174}
   tipTransform: {fileID: 907378301}
+  grabPos: {x: 7.5, y: 3.25, z: 0}
+  restPos: {x: 0, y: 0, z: 0}
+  mouthPos: {x: 0, y: -4, z: 0}
+  tentacleSpeed: 0.25
+  tentacleKey: 111
+  isHoldingFood: 0
 --- !u!4 &325313764
 Transform:
   m_ObjectHideFlags: 0
@@ -502,6 +508,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &533411038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533411039}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &533411039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533411038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.04, y: 0.53, z: 17.55019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549530822
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +550,7 @@ GameObject:
   - component: {fileID: 549530825}
   - component: {fileID: 549530824}
   m_Layer: 0
-  m_Name: Tentacle
+  m_Name: Tentacle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +570,7 @@ Transform:
   - {fileID: 250637242}
   - {fileID: 585263266}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &549530824
 LineRenderer:
@@ -671,6 +707,12 @@ MonoBehaviour:
   smoothAmount: 0.025
   baseTransform: {fileID: 585263266}
   tipTransform: {fileID: 250637242}
+  grabPos: {x: -4.25, y: 3.25, z: 0}
+  restPos: {x: 0, y: 0, z: 0}
+  mouthPos: {x: 0, y: -4, z: 0}
+  tentacleSpeed: 0.25
+  tentacleKey: 101
+  isHoldingFood: 0
 --- !u!1 &585263265
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,7 +855,7 @@ GameObject:
   - component: {fileID: 865721668}
   - component: {fileID: 865721667}
   m_Layer: 0
-  m_Name: Tentacle (2)
+  m_Name: Tentacle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -954,6 +996,12 @@ MonoBehaviour:
   smoothAmount: 0.025
   baseTransform: {fileID: 82488286}
   tipTransform: {fileID: 114861650}
+  grabPos: {x: 4.5, y: 3.25, z: 0}
+  restPos: {x: 0, y: 0, z: 0}
+  mouthPos: {x: 0, y: -4, z: 0}
+  tentacleSpeed: 0.25
+  tentacleKey: 105
+  isHoldingFood: 0
 --- !u!4 &865721669
 Transform:
   m_ObjectHideFlags: 0
@@ -994,7 +1042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875403303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: 0, z: 0}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 995356430}
@@ -1024,7 +1072,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907378300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalPosition: {x: 7.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 325313764}
@@ -1121,7 +1169,7 @@ GameObject:
   - component: {fileID: 995356429}
   - component: {fileID: 995356428}
   m_Layer: 0
-  m_Name: Tentacle (1)
+  m_Name: Tentacle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1166,15 +1214,15 @@ LineRenderer:
   m_SortingOrder: 1
   m_Positions:
   - {x: -3, y: -5, z: 0}
-  - {x: -3.8024883, y: -4.790136, z: 0}
-  - {x: -4.543244, y: -4.493849, z: 0}
-  - {x: -5.222266, y: -4.1111383, z: 0}
-  - {x: -5.839555, y: -3.642006, z: 0}
-  - {x: -6.39511, y: -3.0864503, z: 0}
-  - {x: -6.888932, y: -2.4444718, z: 0}
-  - {x: -7.321022, y: -1.7160707, z: 0}
-  - {x: -7.6913776, y: -0.9012468, z: 0}
-  - {x: -8, y: 0, z: 0}
+  - {x: -3.722302, y: -4.7901764, z: 0}
+  - {x: -4.3890285, y: -4.4939203, z: 0}
+  - {x: -5.0001793, y: -4.1112304, z: 0}
+  - {x: -5.555755, y: -3.642108, z: 0}
+  - {x: -6.055755, y: -3.0865524, z: 0}
+  - {x: -6.5001793, y: -2.4445639, z: 0}
+  - {x: -6.8890285, y: -1.7161423, z: 0}
+  - {x: -7.222302, y: -0.9012876, z: 0}
+  - {x: -7.5, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -1262,6 +1310,12 @@ MonoBehaviour:
   smoothAmount: 0.025
   baseTransform: {fileID: 1169246494}
   tipTransform: {fileID: 875403304}
+  grabPos: {x: -7.5, y: 3.25, z: 0}
+  restPos: {x: 0, y: 0, z: 0}
+  mouthPos: {x: 0, y: -4, z: 0}
+  tentacleSpeed: 0.25
+  tentacleKey: 119
+  isHoldingFood: 0
 --- !u!4 &995356430
 Transform:
   m_ObjectHideFlags: 0
@@ -1276,7 +1330,7 @@ Transform:
   - {fileID: 875403304}
   - {fileID: 1169246494}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128339223
 GameObject:
@@ -1464,7 +1518,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1302128667
 GameObject:
