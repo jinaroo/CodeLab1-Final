@@ -58,6 +58,8 @@ public class UI_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+//        PlayerPrefs.DeleteAll(); // for debugging
+        
         if (instance == null)
         {
             instance = this;
@@ -70,6 +72,6 @@ public class UI_Manager : MonoBehaviour
         
         // cont. high scores
         Score = 0;
-        HighScore = PlayerPrefs.GetInt(PLAYER_PREF_HIGHSCORE, 10); // default value
+        HighScore = PlayerPrefs.GetInt(PLAYER_PREF_HIGHSCORE, 5); // default value
     }
 }

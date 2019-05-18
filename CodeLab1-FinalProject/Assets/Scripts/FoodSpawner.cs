@@ -39,15 +39,18 @@ public class FoodSpawner : MonoBehaviour
             }
 
             // random spawn from left or right
-            if (Random.value < .5f)
-            {
-                newFood.transform.position = leftSpawnPos;
-            }
-            else
-            {
-                newFood.transform.position = rightSpawnPos;
-                newFood.GetComponent<FoodController>().moveSpeed *= -1; // if it spawns from the right, have it move toward the left
-            }
+//            if (Random.value < .5f)
+//            {
+//                newFood.transform.position = leftSpawnPos;
+//            }
+//            else
+//            {
+//                newFood.transform.position = rightSpawnPos;
+//                newFood.GetComponent<FoodController>().moveSpeed *= -1; // if it spawns from the right, have it move toward the left
+//            }
+
+            // just spawning from the left
+            newFood.transform.position = leftSpawnPos;
         }
     }
 }
